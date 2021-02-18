@@ -1,3 +1,4 @@
+//
 #include <iostream>
 using namespace std;
 bool c[20*100000+10]; // 부분수열의 총합값 체크를 위한 bool형 배열
