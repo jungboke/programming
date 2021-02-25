@@ -7,19 +7,19 @@
 #include <algorithm>
 using namespace std;
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-char how[10000];
-int from[10000];
-bool check[10000];
-queue<int> q;
+char how[10000]; // DSLR중 어떤 방법을 통해 해당칸에 도착했는지 나타내기위한 배열
+int from[10000]; // 역추적을 위해 어느칸에서 넘어왔는지 나타내기위한 배열
+bool check[10000]; // 재방문을 막기위한 배열
+queue<int> q; //bfs
 void bfs(int start)
 {
-	check[start] = true;
-	q.push(start);
-	from[start] = 0;
-	while(!q.empty())
+	check[start] = true; //bfs
+	q.push(start); //bfs
+	from[start] = 0; //bfs
+	while(!q.empty()) //bfs
 	{
-		int k = q.front();
-		q.pop();
+		int k = q.front(); //bfs
+		q.pop(); //bfs
 		
 		int D = (2*k)%10000;
 		if(check[D] == false)
@@ -60,7 +60,7 @@ void bfs(int start)
 		}
 	}
 }
-void print(int n, int m)
+void print(int n, int m) // 재귀함수를 통한 역추적 및 출력
 {
 	if(n == m) return;
 	print(n,from[m]);
@@ -74,9 +74,9 @@ int main(int argc, char** argv) {
 	{
 		int n,m;
 		cin >> n >> m;
-		memset(check,false,sizeof(check));
-		memset(from,0,sizeof(from));
-		memset(how,0,sizeof(how));
+		memset(check,false,sizeof(check)); // memset함수를 통한 check배열 초기화
+		memset(from,0,sizeof(from)); // memset함수를 통한 from배열 초기화
+		memset(how,0,sizeof(how)); // memset함수를 통한 how배열 초기화
 		bfs(n);
 		print(n,m);
 		cout << '\n';
