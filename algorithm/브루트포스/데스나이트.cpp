@@ -4,21 +4,21 @@
 #include <cstring>
 #include <queue>
 using namespace std;
-int dx[] = {-2,-2,0,0,2,2};
+int dx[] = {-2,-2,0,0,2,2}; // 체스이동방향 설정
 int dy[] = {-1,1,-2,2,-1,1};
-int dist[200][200];
+int dist[200][200]; // 시작점부터 각칸마다의 거리를 나타내기위한 배열
 int main() {
 int n;
 cin >> n;
 int sx,sy,ex,ey;
-cin >> sx >> sy >> ex >> ey;
-memset(dist,-1,sizeof(dist));
+cin >> sx >> sy >> ex >> ey; // 시작점 입력
+memset(dist,-1,sizeof(dist)); // memset()함수를 통해 dist배열을 모두 -1로 초기화
 dist[sx][sy] = 0;
-queue<pair<int,int>> q;
-q.push(make_pair(sx,sy));
-while (!q.empty()) {
+queue<pair<int,int>> q; //bfs
+q.push(make_pair(sx,sy)); //bfs
+while (!q.empty()) { //bfs
 int x, y;
-tie(x, y) = q.front(); q.pop();
+tie(x, y) = q.front(); q.pop(); //tie()함수를 통해 pair값을 한번에 받을수 있음
 for (int k=0; k<6; k++) {
 int nx = x+dx[k];
 int ny = y+dy[k];
