@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "cpp.exe - 활성 파일 빌드 및 디버그",
+            "name": "g++.exe - 활성 파일 빌드 및 디버그",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
@@ -23,7 +23,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "C/C++: cpp.exe 활성 파일 빌드"
+            "preLaunchTask": "C/C++: g++.exe 활성 파일 빌드"
         }
     ]
 }
