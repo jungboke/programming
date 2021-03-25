@@ -4,7 +4,7 @@
 using namespace std;
 int main() {
 int n, k;
-cin >> n >> k;
+cin >> n >> k; // 동전이 배수단위로 올라갈때만 greedy알고리즘 적용가능
 vector<int> a(n);
 for (int i=0; i<n; i++) {
 cin >> a[i];
