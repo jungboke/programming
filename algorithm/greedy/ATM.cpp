@@ -11,7 +11,7 @@ for (int i=0; i<n; i++) cin >> a[i];
 sort(a.begin(),a.end());
 int sum = 0;
 int ans = 0;
-for (int i=0; i<n; i++) {
+for (int i=0; i<n; i++) { // 누적합 구하는 for문
 sum += a[i];
 ans += sum;
 }
