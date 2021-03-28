@@ -10,7 +10,7 @@ bool cmp(pair<int,int> &a, pair<int,int> &b)
 }
 
 int main() { // 보석도둑 문제 가방기준으로 풀때와 비슷함
-
+             // 현재날짜보다 같거나 큰 날짜의 강연이여야 실행가능함
     int n;
     cin >> n;
     vector<pair<int,int>>a(n);
