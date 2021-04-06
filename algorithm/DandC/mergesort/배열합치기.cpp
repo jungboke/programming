@@ -1,3 +1,4 @@
+//모범답안
 #include <iostream>
 int a[1000000];
 int b[1000000];
