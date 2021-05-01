@@ -3,7 +3,7 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-int calc(vector<int> &a, vector<int> &b) { 숫자배열과 연산자배열을 통해 값을 계산
+int calc(vector<int> &a, vector<int> &b) { //숫자배열과 연산자배열을 통해 값을 계산
 int n = a.size(); 
 int ans = a[0];
 for (int i=1; i<n; i++) {
